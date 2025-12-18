@@ -12,7 +12,7 @@
             --muted: #9a9a9a;
 
             --accent: #2b2a2a;
-            --second-accent: #793FDF;
+            --second-accent: #793fdf;
         }
 
         * {
@@ -142,20 +142,8 @@
         .card {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
-
-        .card .divider {
-            width: 2rem;
-            height: 2px;
-            background: var(--second-accent);
-            transition: width 0.1s ease;
-        }
-
-        .card:hover .divider {
-            width: 100%;
-        }
-
 
         .card p {
             color: var(--muted);
@@ -167,7 +155,6 @@
             height: 160px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 0.75rem;
         }
 
         .divider {
@@ -183,6 +170,24 @@
             color: var(--muted);
             font-size: 0.8rem;
         }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .card-tags p {
+            font-size: 1rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: none;
+            border: 1px solid var(--second-accent);
+            color: var(--second-accent);
+            transition: background-color 0.2s;
+        }
+
     </style>
 </head>
 
@@ -206,7 +211,8 @@
                     <a href="#">Instagram</a>
                     <a href="#">Twitter</a>
                     <a href="#">itch.io</a>
-                </div </div>
+                </div>
+            </div>
         </section>
 
         <!-- PROJECTS -->
@@ -219,27 +225,250 @@
             </div>
 
             <div id="games" class="projects">
+
                 <div class="card">
-                    <img src="https://placehold.co/600x400" alt="Survival Automation Game" />
-                    <h3>Survival Automation Game</h3>
-                    <div class="divider"></div>
-                    <p>Calm survival & automation game built in Unity.</p>
-                    <div class="links">
-                        <a href="#">GitHub</a>
-                        <a href="#">itch.io</a>
+                    <img src="images/games/beetopia.png" alt="Beetopia" />
+
+                    <h3>Beetopia - Prototype</h3>
+
+                    <div class="card-tags">
+                        <p>Unity</p>
                     </div>
+
+                    <p>2D idle-style simulation game</p>
+
+                    <div class="links">
+                        <a href="https://zonh.itch.io/beetopia-prototype">itch.io</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/games/build-and-island.png" alt="Build An Island" />
+
+                    <h3>Build An Island</h3>
+
+                    <div class="card-tags">
+                        <p>Unity</p>
+                    </div>
+
+                    <p>Collect, improve, and grow your very own island paradise!</p>
+
+                    <div class="links">
+                        <a href="https://zonh.itch.io/build-an-island">itch.io</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/games/snakegame.png" alt="3D Snake Game" />
+
+                    <h3>Build An Island</h3>
+
+                    <div class="card-tags">
+                        <p>Unreal Engine</p>
+                    </div>
+
+                    <p>2D snake game in 3D</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/games/shooter.png" alt="3D Snake Game" />
+
+                    <h3>Deathmatch Shooter</h3>
+
+                    <div class="card-tags">
+                        <p>Unreal Engine</p>
+                    </div>
+
+                    <p>Deathmatch game. Experiment with multiplier</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/games/vtube-app.png" alt="3D Snake Game" />
+
+                    <h3>Streaming VTube App</h3>
+
+                    <div class="card-tags">
+                        <p>Unity</p>
+                    </div>
+
+                    <p>App with overlay, twitch chat and different camera angles</p>
                 </div>
             </div>
 
             <div id="design" class="projects" style="display:none;">
+
                 <div class="card">
-                    <img src="https://placehold.co/600x400" alt="Survival Automation Game" />
-                    <h3>Survival Automation Game</h3>
-                    <div class="divider"></div>
-                    <p>Calm survival & automation game built in Unity.</p>
+                    <img src="images/design/cartographers-workstation.png" alt="Whiter Supra" />
+
+                    <h3>Cartographers Workstation</h3>
+                    <div class="card-tags">
+                        <p>Blender</p>
+                    </div>
+
                     <div class="links">
-                        <a href="#">GitHub</a>
-                        <a href="#">itch.io</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/rbx-medieval-house2.png" alt="Whiter Supra" />
+
+                    <h3>Medieval Houses</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/CeKDCeFqXKX/?img_index=1">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/rbx-medieval-house.png" alt="Whiter Supra" />
+
+                    <h3>Medieval House</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/ChU81LhIil6/?img_index=1">Instagram</a>
+                        <a href="https://x.com/zonh_exe/status/1799747124298650030">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/rbx-house.png" alt="Whiter Supra" />
+
+                    <h3>House</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/Ce7FhGxqNdA/?img_index=1">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/rbx-dungeon.jpg" alt="Whiter Supra" />
+
+                    <h3>Dungeon</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/Cbi4MQ7KsA1/">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/rbx-cave.png" alt="Whiter Supra" />
+
+                    <h3>Cave</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/Cc27zYjo5Wj/?img_index=1">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/pharmacy-house.png" alt="Whiter Supra" />
+
+                    <h3>Pharmacy House</h3>
+                    <div class="card-tags">
+                        <p>Blender</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/modular-houses.png" alt="Whiter Supra" />
+
+                    <h3>Modular Houses</h3>
+
+                    <div class="card-tags">
+                        <p>Unity</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/CetQsYWovk3">Instagram</a>
+                        <a href="https://x.com/zonh_exe/status/1805076140991889475">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/low-poly-island.png" alt="Whiter Supra" />
+
+                    <h3>Low Poly Island</h3>
+
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                        <p>Blender</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/CdWb4gWI1-v/">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/love-swing-bench.png" alt="Whiter Supra" />
+
+                    <h3>Love Swing Bench</h3>
+
+                    <div class="card-tags">
+                        <p>Blender</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/Cz2AJ-ntAlo/">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/donut-shop.png" alt="Whiter Supra" />
+
+                    <h3>Donut Shop</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                        <p>Blender</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/CfSfP8AotpH/?img_index=1">Instagram</a>
+                        <a href="https://x.com/zonh_exe/status/1798748717283152244">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/bakery-shop.png" alt="Whiter Supra" />
+
+                    <h3>Bakery Shop</h3>
+                    <div class="card-tags">
+                        <p>Roblox Studio</p>
+                        <p>Blender</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://www.instagram.com/p/Cffeltzo6K8/">Instagram</a>
+                        <a href="https://x.com/zonh_exe/status/1797948978878951536">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/design/white-supra.png" alt="Whiter Supra" />
+
+                    <h3>White Supra</h3>
+                    <div class="card-tags">
+                        <p>Blender</p>
                     </div>
                 </div>
             </div>
