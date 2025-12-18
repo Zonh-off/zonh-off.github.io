@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --fg: #eaeaea;
+            --muted: #9a9a9a;
+
+            --accent: #2b2a2a;
+            --second-accent: #793FDF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: var(--second-accent);
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 2rem 1.5rem;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            font-size: 1.2rem;
+            background-color: var(--accent);
+            padding: 0.25rem 1rem;
+            border: 1px solid #2a2a2a;
+            cursor: pointer;
+            border-radius: 6px;
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            /* важливо */
+            gap: 2rem;
+
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .avatar {
+            height: 100%;
+            /* дорівнює висоті description */
+            aspect-ratio: 1 / 1;
+            /* квадрат */
+            border-radius: 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            max-width: 600px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            padding: 0.5rem 1rem;
+            border: 1px solid #2a2a2a;
+            cursor: pointer;
+            border-radius: 6px;
+            color: var(--muted);
+        }
+
+        .tab.active {
+            border-color: var(--second-accent);
+            color: var(--second-accent);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 4rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .card .divider {
+            width: 2rem;
+            height: 2px;
+            background: var(--second-accent);
+            transition: width 0.1s ease;
+        }
+
+        .card:hover .divider {
+            width: 100%;
+        }
+
+
+        .card p {
+            color: var(--muted);
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
+        .divider {
+            height: 2px;
+            max-width: 4rem;
+            background: var(--second-accent);
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- HOME -->
+        <section class="hero">
+            <img class="avatar" src="https://placehold.co/256x256" alt="Avatar" />
+
+            <div class="description">
+                <h1>Hello! I'm Zonh.</h1>
+
+                <div class="divider"></div>
+
+                <p>
+                    I’m an indie game developer and I enjoy making games and learning new things along the way.
+                </p>
+
+                <div class="links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">itch.io</a>
+                </div </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 5rem;">
+            <h2 style="display: flex; justify-content: center;">Projects</h2>
+
+            <div class="tabs" style="display: flex; justify-content: center;">
+                <div class="tab active" data-tab="games">Games</div>
+                <div class="tab" data-tab="design">Design & Assets</div>
+            </div>
+
+            <div id="games" class="projects">
+                <div class="card">
+                    <img src="https://placehold.co/600x400" alt="Survival Automation Game" />
+                    <h3>Survival Automation Game</h3>
+                    <div class="divider"></div>
+                    <p>Calm survival & automation game built in Unity.</p>
+                    <div class="links">
+                        <a href="#">GitHub</a>
+                        <a href="#">itch.io</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="design" class="projects" style="display:none;">
+                <div class="card">
+                    <img src="https://placehold.co/600x400" alt="Survival Automation Game" />
+                    <h3>Survival Automation Game</h3>
+                    <div class="divider"></div>
+                    <p>Calm survival & automation game built in Unity.</p>
+                    <div class="links">
+                        <a href="#">GitHub</a>
+                        <a href="#">itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 — Zonh
+        </footer>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const sections = {
+            games: document.getElementById('games'),
+            design: document.getElementById('design')
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                Object.values(sections).forEach(s => s.style.display = 'none');
+                sections[tab.dataset.tab].style.display = 'grid';
+            });
+        });
+    </script>
+</body>
+
+</html>
